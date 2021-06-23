@@ -6,18 +6,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            Icons.menu,
-          ),
-        ),
         title: Text("Spending Tracker"),
-        actions: <Widget>[
-          IconButton(
-              icon: Icon(
-            Icons.search,
-          ))
-        ],
       ),
       body: Column(
         children: <Widget>[

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class TransactionPage extends StatelessWidget {
   @override
@@ -41,13 +42,19 @@ class TransactionState extends State<TransactionForm> {
             ),
             Text("Value"),
             TextField(
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Enter a transaction values'),
             ),
             Align(
-              child: Text("hoho"),
               alignment: Alignment.bottomCenter,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("Save"),
+              ),
             )
           ],
         ),
